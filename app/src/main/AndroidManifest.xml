@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sanchoy.bracualleviator" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Parse Permission Start -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission android:protectionLevel="signature"
+        android:name="com.example.sanchoy.bracualleviator.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.example.sanchoy.bracualleviator.permission.C2D_MESSAGE" />
+    <!-- Parse Permission End -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name=".ParsePushAndDatabase">
+
+        <!-- (1)MainAlleviatorActivity -->
+        <activity
+            android:name=".MainAlleviatorActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- (2)facultyLogin_activity -->
+        <activity
+            android:name=".facultyLogin_activity"
+            android:label="@string/title_activity_faculty_login_activity" >
+            <intent-filter>
+                <action android:name="com.example.sanchoy.bracualleviator.facultyLogin_activity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- (3)studentLogin_activity -->
+        <activity
+            android:name=".studentLogin_activity"
+            android:label="@string/title_activity_student_login_activity" >
+            <intent-filter>
+                <action android:name="com.example.sanchoy.bracualleviator.studentLogin_activity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- (4)stdRegister_activity -->
+        <activity
+            android:name=".stdRegister_activity"
+            android:label="@string/title_activity_std_register_activity" >
+            <intent-filter>
+                <action android:name="com.example.sanchoy.bracualleviator.stdRegister_activity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- (5)facultyRegister_activity -->
+        <activity
+            android:name=".facultyRegister_activity"
+            android:label="@string/title_activity_faculty_register_activity" >
+            <intent-filter>
+                <action android:name="com.example.sanchoy.bracualleviator.facultyRegister_activity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- (6)student_page -->
+        <activity
+            android:name=".student_page"
+            android:label="@string/title_activity_student_page" >
+            <intent-filter>
+                <action android:name="com.example.sanchoy.bracualleviator.student_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- (7)faculty_page -->
+        <activity
+            android:name=".faculty_page"
+            android:label="@string/title_activity_faculty_page" >
+            <intent-filter>
+                <action android:name="com.example.sanchoy.bracualleviator.faculty_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- (8)student_to_faculty -->
+        <activity
+            android:name=".student_to_faculty"
+            android:label="@string/title_activity_student_to_faculty" >
+            <intent-filter>
+                <action android:name="com.example.sanchoy.bracualleviator.student_to_faculty" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- (9)faculty_to_student -->
+        <activity
+            android:name=".faculty_to_student"
+            android:label="@string/title_activity_faculty_to_student" >
+            <intent-filter>
+                <action android:name="com.example.sanchoy.bracualleviator.faculty_to_student" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- (10)admin_login -->
+        <activity
+            android:name=".admin_login"
+            android:label="@string/title_activity_admin_login" >
+            <intent-filter>
+                <action android:name="com.example.sanchoy.bracualleviator.admin_login" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- (11)admin_page -->
+        <activity
+            android:name=".admin_page"
+            android:label="@string/title_activity_admin_page" >
+            <intent-filter>
+                <action android:name="com.example.sanchoy.bracualleviator.admin_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- (12)Parse_Test -->
+        <activity
+            android:name=".Parse_Test"
+            android:label="@string/title_activity_parse__test" >
+            <intent-filter>
+                <action android:name="com.example.sanchoy.bracualleviator.Parse_Test" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Parse Broadcast Receiver -->
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParseBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.sanchoy.bracualleviator" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/logo"/>
+        <!-- Parse Broadcast Receiver -->
+    </application>
+
+</manifest>

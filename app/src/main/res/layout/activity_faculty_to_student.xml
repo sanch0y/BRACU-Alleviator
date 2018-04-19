@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.sanchoy.bracualleviator.faculty_to_student"
+    android:background="#000000">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Request from "
+        android:id="@+id/textView16"
+        android:background="#ff999a9b"
+        android:textColor="#ff080808"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/stdRqDetail"
+        android:background="#ffffff"
+        android:textColor="#ffcd0400"
+        android:layout_below="@+id/textView16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="7dp" />
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="APPROVE"
+        android:textStyle="bold"
+        android:id="@+id/approval"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_below="@+id/stdRqDetail"
+        android:layout_toLeftOf="@+id/business"
+        android:layout_toStartOf="@+id/business"
+        android:background="#ff295dab"
+        android:textColor="#ffffff"
+        android:onClick="sendApproved" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BUSY"
+        android:textStyle="bold"
+        android:id="@+id/business"
+        android:layout_below="@+id/stdRqDetail"
+        android:layout_toLeftOf="@+id/rejiction"
+        android:layout_toStartOf="@+id/rejiction"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
+        android:background="#ff2a65b5"
+        android:textColor="#ffffff"
+        android:onClick="sendBusy" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REJECT"
+        android:textStyle="bold"
+        android:id="@+id/rejiction"
+        android:layout_below="@+id/stdRqDetail"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#ff2a65b5"
+        android:textColor="#ffffff"
+        android:onClick="sendRejected" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Do you want to leave any massage?"
+        android:id="@+id/textView17"
+        android:textColor="#ffffffff"
+        android:textStyle="bold"
+        android:layout_below="@+id/rejiction"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/facultyMsgBox"
+        android:layout_below="@+id/textView17"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ff080808"
+        android:background="#ffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND"
+        android:textStyle="bold"
+        android:id="@+id/sendMsgFaculty"
+        android:background="#ff295dab"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/facultyMsgBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:onClick="sendDefaultMassageToStudent" />
+
+    <EditText
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:id="@+id/needHelpStudentID"
+        android:background="#ff999a9b"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView16"
+        android:layout_toEndOf="@+id/textView16" />
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BRACU Alleviator</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">logout</string>
+    <string name="title_activity_faculty_login_activity">facultyLogin_activity</string>
+    <string name="title_activity_student_login_activity">studentLogin_activity</string>
+    <string name="title_activity_std_register_activity">stdRegister_activity</string>
+    <string name="title_activity_faculty_register_activity">facultyRegister_activity</string>
+
+    <string-array name="departments">
+        <item>  </item>
+        <item>  EEE</item>
+        <item>  CSE</item>
+        <item>  MNS</item>
+    </string-array>
+    <string-array name="timing">
+        <item>08.00 - 09.20</item>
+        <item>09.30 - 10.50</item>
+        <item>11.00 - 12.20</item>
+        <item>12.30 - 01.50</item>
+        <item>02.00 - 03.20</item>
+        <item>03.30 - 04.50</item>
+        <item>05.00 - 06.20</item>
+    </string-array>
+    <string-array name="week_days">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+    </string-array>
+
+    <string name="title_activity_sudent_page">sudent_page</string>
+    <string name="title_activity_student_page">student_page</string>
+    <string name="title_activity_faculty_page">faculty_page</string>
+    <string name="title_activity_student_to_faculty">student_to_faculty</string>
+    <string name="title_activity_faculty_to_student">faculty_to_student</string>
+    <string name="title_activity_admin_login">admin_login</string>
+    <string name="title_activity_admin_page">admin_page</string>
+    <string name="title_activity_test__activity">test_ACTIVITY</string>
+    <string name="title_activity_parse_data">Parse_data</string>
+    <string name="title_activity_parse__test">Parse_Test</string>
+
+</resources>
